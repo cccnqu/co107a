@@ -13,5 +13,6 @@ CHIP And16 {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    Nand16(a = a, b = b, out = AnandB);
+    Not16(in = AnandB, out = out);
 }
