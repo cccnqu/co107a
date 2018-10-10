@@ -45,7 +45,7 @@ CHIP ALU {
     mux16(a=x,b=false,c=zx,out=xval)
     not16(in=xval,out=nxval)
     mux16(a=xval,b=nxval,c=nx,out=xfin)
-    mux16(a=y,b=false,c=zy,out=xval)
+    mux16(a=y,b=false,c=zy,out=yval)
     not16(in=yval,out=nyval)
     mux16(a=yval,b=nyval,c=ny,out=yfin)
     add16(a=xfin,b=yfin,out=add)
