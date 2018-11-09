@@ -1,6 +1,7 @@
 # linux
 *.o
 *.log
+*.out
 
 # VisualStudio generate
 Release
