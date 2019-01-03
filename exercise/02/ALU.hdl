@@ -50,7 +50,7 @@ CHIP ALU {
     mux16(a=yval,b=nyval,c=ny,out=yfin)
     add16(a=xfin,b=yfin,out=add)
     and16(a=xfin,b=yfin,out=and)
-    mux16(a=add,b=and,c=f,out=mux)
+    mux16(a=and,b=add,c=f,out=mux)
     not16(in=mux,out=nmux)
     mux16(a=mux,b=nmux,c=no,out=out1)
     Or16Way(in=out1, out=out2)
