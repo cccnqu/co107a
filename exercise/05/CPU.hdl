@@ -39,8 +39,8 @@ CHIP CPU {
         pc[15];          // address of next instruction
 
     PARTS:
-   Or16(a=false, b=instruction, out[15]=isC,out[12]=a, out[11]=c1, out[10]=c2, out[9]=c3, out[8]=c4, out[7]=c5, 
-        out[6]=c6,out[5]=d1, out[4]=d2, out[3]=d3, out[2]=j1, out[1]=j2, out[0]=j3);
+   Or16(a=false, b=instruction, out[15]=isC,out[12]=a, out[11]=c1, out[10]=c2, out[9]=c3, out[8]=c4, 
+   out[7]=c5,out[6]=c6,out[5]=d1, out[4]=d2, out[3]=d3, out[2]=j1, out[1]=j2, out[0]=j3);
 
     Not(in=isC, out=isA);      
     And(a=isC, b=d1, out=AluToA);  
