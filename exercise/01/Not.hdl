@@ -14,5 +14,7 @@ CHIP Not {
 
     PARTS:
     // Put your code here:
+    Not gate:
+    out = not in    
     Nand(a=in, b=in, out=out);
 }
