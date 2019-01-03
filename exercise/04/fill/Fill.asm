@@ -12,3 +12,45 @@
 // the screen should remain fully clear as long as no key is pressed.
 
 // Put your code here.
+(loop)//arr = screen
+@screen
+D = M
+@arr
+M = D
+
+(forloop)//i = 0
+@i
+M = 0
+D = M
+@8192
+D = D - M
+@loop//if(i >= 8192)jmp to loop
+D;JGE
+
+@keyboard//if(kbd == 0)
+D = M
+@kbdz
+D;JEQ
+
+
+@arr//else arr[i] = -1
+D = M
+@i
+A = D + M
+M = -1
+
+
+(back)
+@i//else i++
+M = M + 1
+@forloop//back to loop
+0;JMP
+
+(kbdz)
+@arr
+D = M
+@i
+A = D + M
+M = 0
+@back
+0;JMP
